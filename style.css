@@ -1,207 +1,337 @@
-*{
-
-box-sizing:border-box;
-
+* {
+    box-sizing: border-box;
 }
 
 
-body{
+body {
 
-margin:0;
+    margin: 0;
 
-font-family:Georgia,serif;
+    padding: 0;
 
-background:#fff4df;
+    font-family: Georgia, serif;
 
-color:#4a2c2a;
+    background: #fff4df;
 
-text-align:center;
+    color: #4a2c2a;
 
-}
-
-
-
-header{
-
-background:linear-gradient(
-135deg,
-#5a2d18,
-#c59a3d
-);
-
-padding:30px 20px;
-
-color:white;
+    text-align: center;
 
 }
 
 
 
-.logo{
+/* CABEÇALHO */
 
-width:180px;
+header {
 
-max-width:70%;
+    background: linear-gradient(
+        135deg,
+        #5a2d18,
+        #c59a3d
+    );
 
-height:auto;
+    padding: 35px 20px;
 
-margin:auto;
+    color: white;
 
-display:block;
-
-}
-
-
-
-h1{
-
-font-size:38px;
+    border-bottom: 5px solid #e5c36a;
 
 }
 
 
 
-header p{
+.logo {
 
-font-size:18px;
+    width: 170px;
 
-max-width:600px;
+    max-width: 70%;
 
-margin:auto;
+    height: auto;
 
-line-height:1.5;
+    display: block;
 
-}
-
-
-
-button{
-
-background:#7a3f20;
-
-color:white;
-
-border:none;
-
-padding:14px 35px;
-
-border-radius:30px;
-
-font-size:17px;
-
-cursor:pointer;
-
-margin:10px;
+    margin: 0 auto 15px;
 
 }
 
 
 
-button:hover{
+h1 {
 
-background:#c59a3d;
+    font-size: 38px;
 
-}
-
-
-
-h2{
-
-color:#7a3f20;
-
-font-size:32px;
-
-margin-top:50px;
+    margin: 10px;
 
 }
 
 
 
-.produtos{
+header p {
 
-display:flex;
+    max-width: 650px;
 
-justify-content:center;
+    margin: 15px auto 25px;
 
-flex-wrap:wrap;
+    font-size: 18px;
 
-gap:30px;
-
-padding:20px;
+    line-height: 1.5;
 
 }
 
 
 
-.card{
+/* BOTÕES */
 
-background:white;
+button {
 
-width:320px;
+    background: #7a3f20;
 
-padding:25px;
+    color: white;
 
-border-radius:20px;
+    border: none;
 
-border:2px solid #d5a64a;
+    padding: 14px 35px;
 
-box-shadow:0 8px 20px #0002;
+    border-radius: 30px;
 
-}
+    font-size: 17px;
 
+    cursor: pointer;
 
-
-.produto-img{
-
-width:100%;
-
-height:220px;
-
-object-fit:cover;
-
-border-radius:15px;
+    transition: .3s;
 
 }
 
 
 
-ul{
+button:hover {
 
-text-align:left;
+    background: #c59a3d;
 
-line-height:1.8;
+    transform: scale(1.05);
+
+}
+
+
+
+a {
+
+    text-decoration: none;
 
 }
 
 
 
-footer{
+/* TITULOS */
 
-margin-top:50px;
+h2 {
 
-padding:35px;
+    color: #7a3f20;
 
-background:#5a2d18;
+    font-size: 32px;
 
-color:white;
+    margin-top: 55px;
+
+    margin-bottom: 30px;
 
 }
 
 
+
+h3 {
+
+    color: #8b541f;
+
+    font-size: 23px;
+
+}
+
+
+
+/* PRODUTOS */
+
+.produtos {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    padding: 20px;
+
+}
+
+
+
+/* CARDS */
+
+.card {
+
+    background: white;
+
+    width: 320px;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    border: 2px solid #d5a64a;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,0.15);
+
+    transition: .3s;
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+
+/* FOTOS DOS PRODUTOS */
+
+.produto-img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    margin-bottom: 20px;
+
+    display: block;
+
+}
+
+
+
+/* LISTAS */
+
+ul {
+
+    text-align: left;
+
+    line-height: 1.9;
+
+    padding-left: 25px;
+
+}
+
+
+
+li {
+
+    font-size: 17px;
+
+}
+
+
+
+/* PREÇOS */
+
+.card p {
+
+    font-size: 17px;
+
+}
+
+
+
+.card h3:last-of-type {
+
+    color: #5a2d18;
+
+    font-size: 25px;
+
+}
+
+
+
+/* RODAPÉ */
+
+footer {
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #5a2d18,
+        #2b1408
+    );
+
+    color:white;
+
+    padding:40px 20px;
+
+    margin-top:60px;
+
+}
+
+
+
+footer h2 {
+
+    color:white;
+
+    margin-top:0;
+
+}
+
+
+
+/* CELULAR */
 
 @media(max-width:700px){
 
-.card{
 
-width:90%;
+    .logo {
 
-}
+        width:130px;
+
+    }
 
 
-.logo{
+    h1 {
 
-width:140px;
+        font-size:30px;
 
-}
+    }
+
+
+    h2 {
+
+        font-size:26px;
+
+    }
+
+
+    .card {
+
+        width:90%;
+
+    }
+
+
+    header p {
+
+        font-size:16px;
+
+    }
 
 }
