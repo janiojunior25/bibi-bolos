@@ -1,86 +1,77 @@
 body {
 
-font-family: Georgia, serif;
-background:#fff4df;
-color:#4a2c2a;
-margin:0;
-text-align:center;
+    font-family: 'Georgia', serif;
+    background-color: #fff4df;
+    color: #4a2c2a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 
 }
 
 
+
+/* CABEÇALHO */
 
 header {
 
-background:linear-gradient(#f8e6bd,#fff4df);
-padding:30px;
-border-bottom:3px solid #c59a3d;
+    background: linear-gradient(
+        to bottom,
+        #f8e6bd,
+        #fff4df
+    );
+
+    padding: 20px 20px 45px;
+
+    border-bottom: 3px solid #c59a3d;
 
 }
 
 
+
+/* LOGO */
 
 .logo {
 
-width:160px;
-max-width:80%;
-height:auto;
+    width: 170px;
+
+    max-width: 70%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 15px;
 
 }
 
 
+
+/* TEXTO TOPO */
 
 header p {
 
-font-size:18px;
-max-width:600px;
-margin:20px auto;
+    max-width: 600px;
+
+    margin: 10px auto 20px;
+
+    font-size: 19px;
+
+    line-height: 1.5;
 
 }
 
 
+
+/* TITULOS */
 
 h2 {
 
-color:#7a3f20;
-font-size:32px;
-margin-top:50px;
+    color: #7a3f20;
 
-}
+    font-size: 32px;
 
-
-
-.produtos {
-
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:30px;
-padding:20px;
-
-}
-
-
-
-.card {
-
-background:white;
-width:300px;
-padding:25px;
-border-radius:20px;
-border:2px solid #e1bd73;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-}
-
-
-
-.produto-img {
-
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:15px;
+    margin-top: 55px;
 
 }
 
@@ -88,31 +79,103 @@ border-radius:15px;
 
 h3 {
 
-color:#8b541f;
-font-size:22px;
+    color: #8b541f;
+
+    font-size: 23px;
 
 }
 
 
+
+/* PRODUTOS */
+
+.produtos {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    padding: 20px;
+
+}
+
+
+
+/* CARDS */
+
+.card {
+
+    background: #ffffff;
+
+    width: 300px;
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    border: 2px solid #e1bd73;
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,0.12);
+
+}
+
+
+
+/* IMAGENS */
+
+.produto-img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* LISTAS */
 
 ul {
 
-text-align:left;
-line-height:1.8;
+    text-align: left;
+
+    line-height: 1.9;
+
+    padding-left: 25px;
 
 }
 
 
 
+/* BOTÕES */
+
 button {
 
-background:#7a3f20;
-color:white;
-border:none;
-padding:13px 35px;
-border-radius:30px;
-font-size:16px;
-cursor:pointer;
+    background-color: #7a3f20;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 35px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
 
 }
 
@@ -120,50 +183,85 @@ cursor:pointer;
 
 button:hover {
 
-background:#c59a3d;
+    background-color: #c59a3d;
 
 }
 
 
+
+/* LINKS */
 
 a {
 
-text-decoration:none;
+    text-decoration: none;
 
 }
 
 
+
+/* RODAPÉ */
 
 footer {
 
-background:#5a2d18;
-color:white;
-padding:30px;
-margin-top:50px;
+    background-color: #5a2d18;
+
+    color: white;
+
+    padding: 35px 20px;
+
+    margin-top: 60px;
 
 }
 
 
 
+footer h2 {
+
+    color: #fff4df;
+
+}
+
+
+
+
+
+/* BOTÃO WHATSAPP FLUTUANTE */
+
 .whatsapp-fixo {
 
-position:fixed;
-right:25px;
-bottom:25px;
+    position: fixed;
 
-width:65px;
-height:65px;
+    right: 25px;
 
-background:#25d366;
-border-radius:50%;
+    bottom: 25px;
 
-display:flex;
-align-items:center;
-justify-content:center;
+    width: 65px;
 
-box-shadow:0 5px 15px #555;
+    height: 65px;
 
-z-index:999;
+    background-color: #25d366;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    z-index: 999;
+
+    transition: .3s;
+
+}
+
+
+
+.whatsapp-fixo:hover {
+
+    transform: scale(1.1);
 
 }
 
@@ -171,27 +269,40 @@ z-index:999;
 
 .whatsapp-fixo img {
 
-width:40px;
-height:40px;
+    width: 38px;
+
+    height: 38px;
 
 }
 
 
+
+
+
+/* CELULAR */
 
 @media(max-width:700px){
 
-.card{
 
-width:85%;
+    .logo {
 
-}
+        width: 140px;
+
+    }
 
 
-h2{
+    h2 {
 
-font-size:26px;
+        font-size: 26px;
 
-}
+    }
+
+
+    .card {
+
+        width: 85%;
+
+    }
 
 
 }
