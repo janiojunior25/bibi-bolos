@@ -1,41 +1,20 @@
-* {
-    box-sizing: border-box;
-}
-
-
 body {
 
-    margin: 0;
-
-    padding: 0;
-
-    font-family: Georgia, serif;
-
-    background: #fff4df;
-
-    color: #4a2c2a;
-
-    text-align: center;
+font-family: Georgia, serif;
+background:#fff4df;
+color:#4a2c2a;
+margin:0;
+text-align:center;
 
 }
 
 
-
-/* CABEÇALHO */
 
 header {
 
-    background: linear-gradient(
-        135deg,
-        #5a2d18,
-        #c59a3d
-    );
-
-    padding: 35px 20px;
-
-    color: white;
-
-    border-bottom: 5px solid #e5c36a;
+background:linear-gradient(#f8e6bd,#fff4df);
+padding:30px;
+border-bottom:3px solid #c59a3d;
 
 }
 
@@ -43,25 +22,9 @@ header {
 
 .logo {
 
-    width: 170px;
-
-    max-width: 70%;
-
-    height: auto;
-
-    display: block;
-
-    margin: 0 auto 15px;
-
-}
-
-
-
-h1 {
-
-    font-size: 38px;
-
-    margin: 10px;
+width:160px;
+max-width:80%;
+height:auto;
 
 }
 
@@ -69,71 +32,55 @@ h1 {
 
 header p {
 
-    max-width: 650px;
-
-    margin: 15px auto 25px;
-
-    font-size: 18px;
-
-    line-height: 1.5;
+font-size:18px;
+max-width:600px;
+margin:20px auto;
 
 }
 
 
-
-/* BOTÕES */
-
-button {
-
-    background: #7a3f20;
-
-    color: white;
-
-    border: none;
-
-    padding: 14px 35px;
-
-    border-radius: 30px;
-
-    font-size: 17px;
-
-    cursor: pointer;
-
-    transition: .3s;
-
-}
-
-
-
-button:hover {
-
-    background: #c59a3d;
-
-    transform: scale(1.05);
-
-}
-
-
-
-a {
-
-    text-decoration: none;
-
-}
-
-
-
-/* TITULOS */
 
 h2 {
 
-    color: #7a3f20;
+color:#7a3f20;
+font-size:32px;
+margin-top:50px;
 
-    font-size: 32px;
+}
 
-    margin-top: 55px;
 
-    margin-bottom: 30px;
+
+.produtos {
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+padding:20px;
+
+}
+
+
+
+.card {
+
+background:white;
+width:300px;
+padding:25px;
+border-radius:20px;
+border:2px solid #e1bd73;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+.produto-img {
+
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
 
 }
 
@@ -141,197 +88,110 @@ h2 {
 
 h3 {
 
-    color: #8b541f;
-
-    font-size: 23px;
-
-}
-
-
-
-/* PRODUTOS */
-
-.produtos {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: stretch;
-
-    flex-wrap: wrap;
-
-    gap: 30px;
-
-    padding: 20px;
+color:#8b541f;
+font-size:22px;
 
 }
 
 
-
-/* CARDS */
-
-.card {
-
-    background: white;
-
-    width: 320px;
-
-    padding: 25px;
-
-    border-radius: 25px;
-
-    border: 2px solid #d5a64a;
-
-    box-shadow:
-
-    0 10px 25px rgba(0,0,0,0.15);
-
-    transition: .3s;
-
-}
-
-
-
-.card:hover {
-
-    transform: translateY(-8px);
-
-}
-
-
-
-/* FOTOS DOS PRODUTOS */
-
-.produto-img {
-
-    width: 100%;
-
-    height: 220px;
-
-    object-fit: cover;
-
-    border-radius: 18px;
-
-    margin-bottom: 20px;
-
-    display: block;
-
-}
-
-
-
-/* LISTAS */
 
 ul {
 
-    text-align: left;
-
-    line-height: 1.9;
-
-    padding-left: 25px;
+text-align:left;
+line-height:1.8;
 
 }
 
 
 
-li {
+button {
 
-    font-size: 17px;
-
-}
-
-
-
-/* PREÇOS */
-
-.card p {
-
-    font-size: 17px;
+background:#7a3f20;
+color:white;
+border:none;
+padding:13px 35px;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
 
 }
 
 
 
-.card h3:last-of-type {
+button:hover {
 
-    color: #5a2d18;
-
-    font-size: 25px;
+background:#c59a3d;
 
 }
 
 
 
-/* RODAPÉ */
+a {
+
+text-decoration:none;
+
+}
+
+
 
 footer {
 
-    background:
-
-    linear-gradient(
-        135deg,
-        #5a2d18,
-        #2b1408
-    );
-
-    color:white;
-
-    padding:40px 20px;
-
-    margin-top:60px;
+background:#5a2d18;
+color:white;
+padding:30px;
+margin-top:50px;
 
 }
 
 
 
-footer h2 {
+.whatsapp-fixo {
 
-    color:white;
+position:fixed;
+right:25px;
+bottom:25px;
 
-    margin-top:0;
+width:65px;
+height:65px;
+
+background:#25d366;
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 5px 15px #555;
+
+z-index:999;
 
 }
 
 
 
-/* CELULAR */
+.whatsapp-fixo img {
+
+width:40px;
+height:40px;
+
+}
+
+
 
 @media(max-width:700px){
 
+.card{
 
-    .logo {
+width:85%;
 
-        width:130px;
-
-    }
-
-
-    h1 {
-
-        font-size:30px;
-
-    }
+}
 
 
-    h2 {
+h2{
 
-        font-size:26px;
+font-size:26px;
 
-    }
+}
 
-
-    .card {
-
-        width:90%;
-
-    }
-
-
-    header p {
-
-        font-size:16px;
-
-    }
 
 }
