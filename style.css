@@ -1,40 +1,207 @@
-/* IMAGENS DOS PRODUTOS */
+*{
 
-.produto-img {
+box-sizing:border-box;
 
-    width: 100%;
+}
 
-    height: 230px;
 
-    object-fit: cover;
+body{
 
-    border-radius: 20px;
+margin:0;
 
-    margin-bottom: 20px;
+font-family:Georgia,serif;
 
-    box-shadow:
-    0 8px 18px rgba(0,0,0,0.15);
+background:#fff4df;
+
+color:#4a2c2a;
+
+text-align:center;
 
 }
 
 
 
-/* DEIXAR OS CARDS MAIS PREMIUM */
+header{
 
-.card {
+background:linear-gradient(
+135deg,
+#5a2d18,
+#c59a3d
+);
 
-    overflow: hidden;
+padding:30px 20px;
+
+color:white;
 
 }
 
 
 
-/* ANIMAÇÃO NAS IMAGENS */
+.logo{
 
-.produto-img:hover {
+width:180px;
 
-    transform: scale(1.05);
+max-width:70%;
 
-    transition: 0.4s;
+height:auto;
+
+margin:auto;
+
+display:block;
+
+}
+
+
+
+h1{
+
+font-size:38px;
+
+}
+
+
+
+header p{
+
+font-size:18px;
+
+max-width:600px;
+
+margin:auto;
+
+line-height:1.5;
+
+}
+
+
+
+button{
+
+background:#7a3f20;
+
+color:white;
+
+border:none;
+
+padding:14px 35px;
+
+border-radius:30px;
+
+font-size:17px;
+
+cursor:pointer;
+
+margin:10px;
+
+}
+
+
+
+button:hover{
+
+background:#c59a3d;
+
+}
+
+
+
+h2{
+
+color:#7a3f20;
+
+font-size:32px;
+
+margin-top:50px;
+
+}
+
+
+
+.produtos{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:30px;
+
+padding:20px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+width:320px;
+
+padding:25px;
+
+border-radius:20px;
+
+border:2px solid #d5a64a;
+
+box-shadow:0 8px 20px #0002;
+
+}
+
+
+
+.produto-img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+}
+
+
+
+ul{
+
+text-align:left;
+
+line-height:1.8;
+
+}
+
+
+
+footer{
+
+margin-top:50px;
+
+padding:35px;
+
+background:#5a2d18;
+
+color:white;
+
+}
+
+
+
+@media(max-width:700px){
+
+.card{
+
+width:90%;
+
+}
+
+
+.logo{
+
+width:140px;
+
+}
 
 }
