@@ -1,6 +1,8 @@
 function selecionarProduto(nome){
 
-document.getElementById("produto").value = nome;
+let produto = document.getElementById("produto");
+
+produto.value = nome;
 
 document.querySelector(".pedido").scrollIntoView({
 behavior:"smooth"
