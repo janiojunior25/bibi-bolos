@@ -69,16 +69,27 @@ alt="Bolo de Chocolate">
 
 <select id="saborBoloPequeno">
 
-<option>Chocolate</option>
+<div class="sabores">
 
-<option>Ninho</option>
+<button type="button" onclick="escolherSabor('Chocolate')">
+🍫 Chocolate
+</button>
 
-<option>Prestígio</option>
+<button type="button" onclick="escolherSabor('Ninho')">
+🤍 Ninho
+</button>
 
-<option>Maracujá</option>
+<button type="button" onclick="escolherSabor('Prestígio')">
+🥥 Prestígio
+</button>
 
-</select>
+<button type="button" onclick="escolherSabor('Maracujá')">
+🥭 Maracujá
+</button>
 
+</div>
+
+<input type="hidden" id="saborEscolhido">
 
 <h3>R$ 35,00</h3>
 
