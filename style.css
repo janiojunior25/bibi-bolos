@@ -368,3 +368,17 @@ footer h2 {
 
 
 }
+/* AJUSTE FINAL DAS IMAGENS DOS PRODUTOS */
+
+.card img,
+.produto-img {
+
+    width:100% !important;
+
+    height:100px !important;
+
+    object-fit:cover !important;
+
+    border-radius:15px !important;
+
+}
