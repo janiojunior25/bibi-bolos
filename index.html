@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,71 +12,184 @@
 
 </head>
 
+
 <body>
+
 
 <header>
 
-<img src="logo.png" class="logo">
+<img src="imagens/logo-bibi.png" class="logo">
 
 <h1>BIBI Bolos e Doces</h1>
 
-<p>Pequenos prazeres em grandes momentos ❤️</p>
+<p>
+Bolos e doces feitos com carinho, sabor e qualidade ❤️
+</p>
+
 
 </header>
 
 
+
+<section class="cardapio">
+
+
+<h2>🍰 Nosso Cardápio</h2>
+
+
+<div class="produtos">
+
+
+
+<div class="card">
+
+<img src="imagens/bolo-chocolate.png">
+
+<h3>Bolo Pequeno</h3>
+
+<p>Chocolate, Ninho, Prestígio e Maracujá</p>
+
+<h2>R$35,00</h2>
+
+<button onclick="selecionarProduto('Bolo Pequeno')">
+Pedir
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="imagens/bolo-prestigio.png">
+
+<h3>Bolo Grande</h3>
+
+<p>Chocolate, Ninho, Prestígio e Maracujá</p>
+
+<h2>R$45,00</h2>
+
+
+<button onclick="selecionarProduto('Bolo Grande')">
+Pedir
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="imagens/brigadeiros.png">
+
+
+<h3>Brigadeiro Linha Clássica</h3>
+
+
+<p>
+25 unidades - R$50,00
+<br>
+50 unidades - R$95,00
+<br>
+100 unidades - R$185,00
+</p>
+
+
+<button onclick="selecionarProduto('Brigadeiro Clássico')">
+Pedir
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<img src="imagens/brigadeiros-premium.png">
+
+
+<h3>Brigadeiro Premium</h3>
+
+
+<p>
+Ferrero Rocher<br>
+Nutella<br>
+Oreo<br>
+Ninho
+</p>
+
+
+<button onclick="selecionarProduto('Brigadeiro Premium')">
+Pedir
+</button>
+
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
 <section class="pedido">
 
-<h2>Faça seu pedido</h2>
+
+<h2>🛒 Finalizar Pedido</h2>
 
 
-<label>Escolha o produto:</label>
+<label>Produto:</label>
 
-<select id="produto" onchange="atualizarProdutos()">
-
-<option value="Brigadeiros">Brigadeiros</option>
-
-<option value="Bolos">Bolos</option>
-
-</select>
+<input id="produto" readonly>
 
 
 
-<label>Escolha o sabor:</label>
+<label>Sabor:</label>
+
 
 <select id="sabor">
 
 <option>Chocolate</option>
-
 <option>Ninho</option>
-
-<option>Beijinho</option>
-
-<option>Coco queimado</option>
-
 <option>Prestígio</option>
-
-<option>Limão</option>
-
-<option>Laranja</option>
-
 <option>Nutella</option>
-
 <option>Oreo</option>
-
 <option>Ferrero Rocher</option>
 
 </select>
 
 
+
 <label>Quantidade:</label>
 
-<input type="number" id="quantidade" value="1" min="1">
+<input type="number" id="quantidade" value="1">
 
 
-<label>Observação:</label>
 
-<textarea id="obs" placeholder="Ex: Quero para aniversário dia 10..."></textarea>
+<label>Nome:</label>
+
+<input id="nome" placeholder="Seu nome">
+
+
+
+<label>Endereço:</label>
+
+<textarea id="endereco"></textarea>
+
 
 
 <button onclick="enviarWhatsapp()">
@@ -84,19 +199,37 @@ Enviar pedido pelo WhatsApp
 </button>
 
 
+
 </section>
+
+
 
 
 
 <footer>
 
-<p>WhatsApp: (69) 99395-5202</p>
+<h3>
+📲 WhatsApp
+</h3>
+
+
+<p>
+69 99395-5202
+</p>
+
+
+<p>
+Produção artesanal com muito amor ❤️
+</p>
+
 
 </footer>
 
 
 
+
 <script src="script.js"></script>
+
 
 </body>
 
