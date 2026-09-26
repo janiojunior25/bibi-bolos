@@ -1,116 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BIBI Bolos & Doces | Bolos Artesanais e Brigadeiros Gourmet</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-<img src="logo-bibi.png" class="logo" alt="BIBI Bolos & Doces">
-<p>Bolos artesanais e brigadeiros gourmet feitos com carinho, qualidade e muito sabor ❤️</p>
-<a href="#cardapio"><button>🍰 Conheça Nosso Cardápio</button></a>
+
+<img src="logo-bibi.png"
+alt="BIBI Bolos & Doces"
+class="logo">
+
+<p>
+BIBI Bolos & Doces: bolos artesanais e brigadeiros gourmet
+feitos com carinho, qualidade e muito sabor ❤️
+</p>
+
+<a href="#cardapio">
+<button>🍰 Conheça Nosso Cardápio</button>
+</a>
+
 </header>
 
+
 <section id="cardapio">
+
 <h2>🎂 Bolos Caseiros</h2>
+
 <div class="produtos">
 
+
 <div class="card">
+
 <img src="bolo-chocolate.png" class="produto-img">
+
 <h3>Bolo Pequeno</h3>
+
+<p>Escolha o sabor:</p>
+
 <div class="sabores">
-<button onclick="boloPequeno('Chocolate')">🍫 Chocolate</button>
-<button onclick="boloPequeno('Ninho')">🤍 Ninho</button>
-<button onclick="boloPequeno('Prestígio')">🥥 Prestígio</button>
-<button onclick="boloPequeno('Maracujá')">🥭 Maracujá</button>
+
+<button onclick="selecionar('Bolo Pequeno','Chocolate','35,00')">🍫 Chocolate</button>
+
+<button onclick="selecionar('Bolo Pequeno','Ninho','35,00')">🤍 Ninho</button>
+
+<button onclick="selecionar('Bolo Pequeno','Prestígio','35,00')">🥥 Prestígio</button>
+
+<button onclick="selecionar('Bolo Pequeno','Maracujá','35,00')">🥭 Maracujá</button>
+
 </div>
+
 <h3>R$ 35,00</h3>
-<button onclick="pedirPequeno()">📲 Encomendar</button>
+
+<button onclick="enviarPedido()">📲 Encomendar</button>
+
 </div>
+
+
 
 <div class="card">
+
 <img src="bolo-prestigio.png" class="produto-img">
+
 <h3>Bolo Grande</h3>
+
+<p>Escolha o sabor:</p>
+
 <div class="sabores">
-<button onclick="boloGrande('Chocolate')">🍫 Chocolate</button>
-<button onclick="boloGrande('Ninho')">🤍 Ninho</button>
-<button onclick="boloGrande('Prestígio')">🥥 Prestígio</button>
-<button onclick="boloGrande('Maracujá')">🥭 Maracujá</button>
-</div>
-<h3>R$ 45,00</h3>
-<button onclick="pedirGrande()">📲 Encomendar</button>
-</div>
+
+<button onclick="selecionar('Bolo Grande','Chocolate','45,00')">🍫 Chocolate</button>
+
+<button onclick="selecionar('Bolo Grande','Ninho','45,00')">🤍 Ninho</button>
+
+<button onclick="selecionar('Bolo Grande','Prestígio','45,00')">🥥 Prestígio</button>
+
+<button onclick="selecionar('Bolo Grande','Maracujá','45,00')">🥭 Maracujá</button>
 
 </div>
+
+<h3>R$ 45,00</h3>
+
+<button onclick="enviarPedido()">📲 Encomendar</button>
+
+</div>
+
+
+</div>
+
 </section>
 
+
 <section>
+
 <h2>🍬 Brigadeiros Gourmet</h2>
+
 <div class="produtos">
 
+
 <div class="card">
+
 <img src="brigadeiros.png" class="produto-img">
+
 <h3>🍫 Linha Clássica</h3>
+
 <p>25 unidades: R$ 50,00</p>
 <p>50 unidades: R$ 95,00</p>
 <p>100 unidades: R$ 185,00</p>
-<button onclick="pedirBrigadeiro('Linha Clássica')">📲 Encomendar</button>
+
+<button onclick="selecionar('Brigadeiros','Linha Clássica','')">📲 Encomendar</button>
+
 </div>
 
+
 <div class="card">
-<img src="brigadeiros.png" class="produto-img">
-<h3>🍫 Linha Especial</h3>
+
+<img src="brigadeiros-premium.png" class="produto-img">
+
+<h3>✨ Linha Especial</h3>
+
 <p>25 unidades: R$ 65,00</p>
 <p>50 unidades: R$ 115,00</p>
 <p>100 unidades: R$ 210,00</p>
-<button onclick="pedirBrigadeiro('Linha Especial')">📲 Encomendar</button>
+
+<button onclick="selecionar('Brigadeiros','Linha Especial','')">📲 Encomendar</button>
+
 </div>
 
+
 <div class="card">
+
 <img src="brigadeiros-premium.png" class="produto-img">
-<h3>✨ Linha Suprema</h3>
+
+<h3>⭐ Linha Suprema</h3>
+
 <p>25 unidades: R$ 75,00</p>
 <p>50 unidades: R$ 140,00</p>
 <p>100 unidades: R$ 245,00</p>
-<button onclick="pedirBrigadeiro('Linha Suprema')">📲 Encomendar</button>
-</div>
+
+<button onclick="selecionar('Brigadeiros','Linha Suprema','')">📲 Encomendar</button>
 
 </div>
+
+
+</div>
+
 </section>
 
+
 <footer>
+
 <h2>📲 Faça seu pedido</h2>
+
 <p>WhatsApp: 69 993955202</p>
+
+<p>Produção artesanal com ingredientes de qualidade ❤️</p>
+
 </footer>
 
+
+
 <script>
-let pequeno="";
-let grande="";
 
-function boloPequeno(s){ pequeno=s; }
-function boloGrande(s){ grande=s; }
+let produto = "";
+let sabor = "";
+let valor = "";
 
-function enviar(msg){
-window.open("https://wa.me/5569993955202?text="+encodeURIComponent(msg),"_blank");
+
+function selecionar(p,s,v){
+
+produto = p;
+sabor = s;
+valor = v;
+
 }
 
-function pedirPequeno(){
-if(!pequeno){alert("Escolha o sabor");return;}
-enviar("Olá! Quero o Bolo Pequeno. Sabor: "+pequeno+" Valor: R$35,00");
+
+function enviarPedido(){
+
+if(produto == ""){
+
+alert("Escolha um produto primeiro!");
+
+return;
+
 }
 
-function pedirGrande(){
-if(!grande){alert("Escolha o sabor");return;}
-enviar("Olá! Quero o Bolo Grande. Sabor: "+grande+" Valor: R$45,00");
+
+let mensagem =
+"Olá! Gostaria de fazer uma encomenda na BIBI Bolos & Doces.%0A%0A"+
+"Produto: "+produto+"%0A"+
+"Sabor/Linha: "+sabor+"%0A"+
+"Valor: R$ "+valor;
+
+
+window.open(
+"https://wa.me/5569993955202?text="+mensagem,
+"_blank"
+);
+
 }
 
-function pedirBrigadeiro(linha){
-enviar("Olá! Quero pedir "+linha+" da BIBI Bolos & Doces.");
-}
 </script>
 
+
 </body>
+
 </html>
