@@ -8,6 +8,1112 @@
 
 <title>BIBI Bolos e Doces</title>
 
+
+<style>
+
+
+*{
+box-sizing:border-box;
+}
+
+
+html{
+scroll-behavior:smooth;
+}
+
+
+
+body{
+
+margin:0;
+background:#2b1005;
+font-family:Arial, sans-serif;
+color:white;
+
+}
+
+
+
+/* MENU */
+
+
+nav{
+
+background:#180903;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:10;
+
+}
+
+
+
+nav a{
+
+color:#f6d48a;
+text-decoration:none;
+margin:0 12px;
+font-weight:bold;
+font-size:16px;
+transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+color:white;
+transform:scale(1.1);
+
+}
+
+
+
+
+
+/* TOPO */
+
+
+.topo{
+
+background:linear-gradient(#5a250c,#351306);
+text-align:center;
+padding:35px 15px;
+
+}
+
+
+
+.logo{
+
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:50%;
+
+}
+
+
+
+.topo h1{
+
+color:#f6d48a;
+font-size:40px;
+margin:15px 0;
+
+}
+
+
+
+.topo p{
+
+font-size:20px;
+
+}
+
+
+
+
+
+.container{
+
+width:90%;
+max-width:1100px;
+margin:auto;
+
+}
+
+
+
+
+
+.titulo{
+
+margin-top:40px;
+background:#6b2c0c;
+padding:15px;
+border-radius:15px;
+color:#f8d890;
+font-size:28px;
+text-align:center;
+
+}
+
+
+
+
+
+.aviso{
+
+background:#f5d79b;
+color:#5a250c;
+padding:15px;
+border-radius:15px;
+text-align:center;
+margin-top:25px;
+font-weight:bold;
+
+}
+
+
+
+
+
+.cardapio-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+margin-top:25px;
+
+}
+
+
+
+
+
+.sabor-card{
+
+background:#f5d79b;
+color:#3b1708;
+padding:25px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.4);
+border:2px solid #e1bd73;
+
+}
+
+.sabor-card h3{
+
+color:#6b2c0c;
+
+}
+
+
+
+.sabor-card p{
+
+font-size:18px;
+line-height:1.6;
+
+}
+
+
+
+.sabor-card ul{
+
+text-align:left;
+padding-left:25px;
+font-size:18px;
+line-height:1.5;
+
+}
+
+
+
+.preco{
+
+font-size:22px;
+font-weight:bold;
+color:#6b2c0c;
+margin:15px 0;
+line-height:1.6;
+
+}
+
+
+
+
+
+.botao{
+
+display:inline-block;
+background:#6b2c0c;
+color:white !important;
+padding:14px 30px;
+border-radius:20px;
+font-weight:bold;
+border:none;
+cursor:pointer;
+margin-top:10px;
+
+}
+
+
+
+.botao:hover{
+
+background:#3b1708;
+
+}
+
+
+
+
+
+.produto-img{
+
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+
+}
+
+
+
+
+
+/* PEDIDO */
+
+
+#pedido label{
+
+display:block;
+color:#6b2c0c;
+font-size:18px;
+margin-top:15px;
+
+}
+
+
+
+#pedido select,
+#pedido input,
+#pedido textarea{
+
+
+width:90%;
+padding:14px;
+border-radius:12px;
+border:1px solid #d99b3d;
+font-size:16px;
+margin-top:8px;
+
+
+}
+
+
+
+#pedido textarea{
+
+height:100px;
+
+}
+
+
+
+
+.rodape{
+
+margin-top:50px;
+background:#180903;
+padding:30px;
+text-align:center;
+color:#f6d48a;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav>
+
+
+<a href="#inicio">
+🏠 Início
+</a>
+
+
+<a href="#brigadeiros">
+💎 Brigadeiros
+</a>
+
+
+<a href="#bolos">
+🍰 Bolos
+</a>
+
+
+<a href="#pedido">
+🛒 Pedido
+</a>
+
+
+</nav>
+
+
+
+
+
+
+<div class="topo" id="inicio">
+
+
+<img class="logo"
+src="{{ url_for('static', filename='logo-bibi.png.png') }}">
+
+
+
+<h1>
+BIBI Bolos e Doces
+</h1>
+
+
+
+<p>
+Pequenos prazeres em grandes momentos ❤️
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="container">
+
+
+
+<div class="aviso">
+
+⚠️ As fotos dos produtos são apenas ilustrativas. 
+O produto entregue pode apresentar pequenas diferenças de aparência.
+
+</div>
+
+
+
+
+
+
+<h2 class="titulo" id="brigadeiros">
+
+💎 Cardápio de Brigadeiros
+
+</h2>
+
+
+
+
+
+<div class="cardapio-grid">
+
+
+
+
+
+<div class="sabor-card">
+
+
+<img class="produto-img"
+src="{{ url_for('static', filename='brigadeiros.png') }}">
+
+
+
+<h3>
+💎 Linha Clássica
+</h3>
+
+
+<ul>
+
+<li>Chocolate</li>
+<li>Ninho</li>
+<li>Beijinho</li>
+<li>Coco Queimado</li>
+<li>Meio Amargo</li>
+<li>Chocolate Branco</li>
+
+</ul>
+
+
+<div class="preco">
+
+25 unidades - R$50,00<br>
+50 unidades - R$95,00<br>
+100 unidades - R$185,00
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="sabor-card">
+
+
+<img class="produto-img"
+src="{{ url_for('static', filename='brigadeiros-premium.png') }}">
+
+
+
+<h3>
+✨ Linha Especial
+</h3>
+
+
+<ul>
+
+<li>Prestígio</li>
+<li>Limão</li>
+<li>Laranja</li>
+<li>Cenoura com Chocolate</li>
+
+</ul>
+
+
+<div class="preco">
+
+25 unidades - R$60,00<br>
+50 unidades - R$110,00<br>
+100 unidades - R$200,00
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="sabor-card">
+
+
+<img class="produto-img"
+src="{{ url_for('static', filename='brigadeiros-premium.png') }}">
+
+
+
+<h3>
+👑 Linha Suprema
+</h3>
+
+
+<ul>
+
+<li>Ferrero Rocher</li>
+<li>Oreo</li>
+<li>Nutella</li>
+<li>Paçoca</li>
+<li>Morango</li>
+
+</ul>
+
+
+<div class="preco">
+
+25 unidades - R$70,00<br>
+50 unidades - R$130,00<br>
+100 unidades - R$230,00
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<h2 class="titulo" id="bolos">
+
+🍰 Bolos Caseiros
+
+</h2>
+
+
+
+
+<div class="cardapio-grid">
+
+
+
+
+
+<div class="sabor-card">
+
+
+<img class="produto-img"
+src="{{ url_for('static', filename='bolo-chocolate.png') }}">
+
+
+
+<h3>
+🍫 Bolo Chocolate
+</h3>
+
+
+
+<p>
+
+Massa fofinha de chocolate<br>
+Cobertura cremosa especial
+
+</p>
+
+
+
+<div class="preco">
+
+R$45,00
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="sabor-card">
+
+
+<img class="produto-img"
+src="{{ url_for('static', filename='bolo-prestigio.png') }}">
+
+
+
+<h3>
+🥥 Bolo Prestígio
+</h3>
+
+
+
+<p>
+
+Chocolate com recheio<br>
+cremoso de coco
+
+</p>
+
+
+
+<div class="preco">
+
+R$45,00
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="sabor-card">
+
+
+<img class="produto-img"
+src="{{ url_for('static', filename='bolo.png.png') }}">
+
+
+
+<h3>
+🍰 Outros Sabores
+</h3>
+
+
+
+<p>
+
+Cenoura com Chocolate<br>
+Ninho com Morango<br>
+Limão<br>
+Laranja
+
+</p>
+
+
+
+<div class="preco">
+
+Consultar
+
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- FINALIZAR PEDIDO -->
+
+
+<div id="pedido">
+
+
+
+<h2 class="titulo">
+
+🛒 Finalizar Pedido
+
+</h2>
+
+
+
+
+
+<div class="sabor-card">
+
+
+
+<label>
+Produto:
+</label>
+
+
+
+<select id="produto" onchange="atualizarSabores()">
+
+
+
+<option value="">
+Selecione o produto
+</option>
+
+
+
+<option value="Bolo Pequeno">
+Bolo Pequeno
+</option>
+
+
+
+<option value="Bolo Grande">
+Bolo Grande
+</option>
+
+
+
+<option value="Brigadeiro Linha Clássica">
+Brigadeiro Linha Clássica
+</option>
+
+
+
+<option value="Brigadeiro Linha Especial">
+Brigadeiro Linha Especial
+</option>
+
+
+
+<option value="Brigadeiro Linha Suprema">
+Brigadeiro Linha Suprema
+</option>
+
+
+
+</select>
+
+
+
+
+
+
+<label>
+Sabor:
+</label>
+
+
+
+<select id="sabor">
+
+
+<option>
+
+Selecione o produto primeiro
+
+</option>
+
+
+</select>
+
+
+
+
+
+
+<label>
+Quantidade:
+</label>
+
+
+<input id="quantidade" type="number" value="1">
+
+
+
+
+
+
+<label>
+Nome:
+</label>
+
+
+<input id="nome" placeholder="Digite seu nome">
+
+
+
+
+
+
+<label>
+Endereço:
+</label>
+
+
+<textarea id="endereco"
+placeholder="Digite seu endereço">
+</textarea>
+
+
+
+
+
+
+<button class="botao"
+onclick="enviarPedido()">
+
+Enviar pedido pelo WhatsApp
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="rodape">
+
+
+<h2>
+BIBI Bolos e Doces
+</h2>
+
+
+
+<p>
+📲 WhatsApp: 69 99395-5202
+</p>
+
+
+
+<p>
+🍰 Feitos com amor e qualidade ❤️
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+function atualizarSabores(){
+
+
+let produto =
+document.getElementById("produto").value;
+
+
+let sabor =
+document.getElementById("sabor");
+
+
+
+sabor.innerHTML="";
+
+
+
+let lista=[];
+
+
+
+
+
+if(produto=="Brigadeiro Linha Clássica"){
+
+
+lista=[
+
+"Chocolate",
+"Ninho",
+"Beijinho",
+"Coco Queimado",
+"Meio Amargo",
+"Chocolate Branco"
+
+];
+
+
+}
+
+
+
+
+
+if(produto=="Brigadeiro Linha Especial"){
+
+
+lista=[
+
+"Prestígio",
+"Limão",
+"Laranja",
+"Cenoura com Chocolate"
+
+];
+
+
+}
+
+
+
+
+
+if(produto=="Brigadeiro Linha Suprema"){
+
+
+lista=[
+
+"Ferrero Rocher",
+"Oreo",
+"Nutella",
+"Paçoca",
+"Morango"
+
+];
+
+
+}
+
+
+
+
+
+
+if(produto=="Bolo Pequeno" || produto=="Bolo Grande"){
+
+
+lista=[
+
+"Chocolate",
+"Prestígio",
+"Cenoura com Chocolate",
+"Ninho com Morango",
+"Limão",
+"Laranja"
+
+];
+
+
+}
+
+
+
+
+
+
+lista.forEach(function(item){
+
+
+let opcao =
+document.createElement("option");
+
+
+opcao.text=item;
+
+
+sabor.add(opcao);
+
+
+});
+
+
+
+}
+
+
+
+
+
+
+
+
+
+function enviarPedido(){
+
+
+
+let produto =
+document.getElementById("produto").value;
+
+
+
+let sabor =
+document.getElementById("sabor").value;
+
+
+
+let quantidade =
+document.getElementById("quantidade").value;
+
+
+
+let nome =
+document.getElementById("nome").value;
+
+
+
+let endereco =
+document.getElementById("endereco").value;
+
+
+
+
+
+
+let mensagem =
+
+`Olá, BIBI Bolos e Doces! 🍰
+
+Quero fazer um pedido:
+
+Produto: ${produto}
+
+Sabor: ${sabor}
+
+Quantidade: ${quantidade}
+
+Nome: ${nome}
+
+Endereço:
+${endereco}
+
+Observação:
+As fotos dos produtos são apenas ilustrativas.
+
+Obrigado! ❤️`;
+
+
+
+
+
+
+let link =
+
+"https://wa.me/5569993955202?text="
+
++ encodeURIComponent(mensagem);
+
+
+
+
+
+window.open(link,"_blank");
+
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BIBI Bolos e Doces</title>
+
 <link rel="stylesheet" href="style.css">
 
 </head>
