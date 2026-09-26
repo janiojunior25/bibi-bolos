@@ -1,214 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BIBI Bolos & Doces | Bolos Artesanais e Brigadeiros Gourmet</title>
+<title>BIBI Bolos e Doces</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
 
-<img src="logo-bibi.png"
-alt="BIBI Bolos & Doces"
-class="logo">
+<img src="logo.png" class="logo">
 
-<p>
-BIBI Bolos & Doces: bolos artesanais e brigadeiros gourmet
-feitos com carinho, qualidade e muito sabor ❤️
-</p>
+<h1>BIBI Bolos e Doces</h1>
 
-<a href="#cardapio">
-<button>🍰 Conheça Nosso Cardápio</button>
-</a>
+<p>Pequenos prazeres em grandes momentos ❤️</p>
 
 </header>
 
 
-<section id="cardapio">
+<section class="pedido">
 
-<h2>🎂 Bolos Caseiros</h2>
-
-<div class="produtos">
+<h2>Faça seu pedido</h2>
 
 
-<div class="card">
+<label>Escolha o produto:</label>
 
-<img src="bolo-chocolate.png" class="produto-img">
+<select id="produto" onchange="atualizarProdutos()">
 
-<h3>Bolo Pequeno</h3>
+<option value="Brigadeiros">Brigadeiros</option>
 
-<p>Escolha o sabor:</p>
+<option value="Bolos">Bolos</option>
 
-<div class="sabores">
-
-<button onclick="selecionar('Bolo Pequeno','Chocolate','35,00')">🍫 Chocolate</button>
-
-<button onclick="selecionar('Bolo Pequeno','Ninho','35,00')">🤍 Ninho</button>
-
-<button onclick="selecionar('Bolo Pequeno','Prestígio','35,00')">🥥 Prestígio</button>
-
-<button onclick="selecionar('Bolo Pequeno','Maracujá','35,00')">🥭 Maracujá</button>
-
-</div>
-
-<h3>R$ 35,00</h3>
-
-<button onclick="enviarPedido()">📲 Encomendar</button>
-
-</div>
+</select>
 
 
 
-<div class="card">
+<label>Escolha o sabor:</label>
 
-<img src="bolo-prestigio.png" class="produto-img">
+<select id="sabor">
 
-<h3>Bolo Grande</h3>
+<option>Chocolate</option>
 
-<p>Escolha o sabor:</p>
+<option>Ninho</option>
 
-<div class="sabores">
+<option>Beijinho</option>
 
-<button onclick="selecionar('Bolo Grande','Chocolate','45,00')">🍫 Chocolate</button>
+<option>Coco queimado</option>
 
-<button onclick="selecionar('Bolo Grande','Ninho','45,00')">🤍 Ninho</button>
+<option>Prestígio</option>
 
-<button onclick="selecionar('Bolo Grande','Prestígio','45,00')">🥥 Prestígio</button>
+<option>Limão</option>
 
-<button onclick="selecionar('Bolo Grande','Maracujá','45,00')">🥭 Maracujá</button>
+<option>Laranja</option>
 
-</div>
+<option>Nutella</option>
 
-<h3>R$ 45,00</h3>
+<option>Oreo</option>
 
-<button onclick="enviarPedido()">📲 Encomendar</button>
+<option>Ferrero Rocher</option>
 
-</div>
+</select>
 
 
-</div>
+<label>Quantidade:</label>
+
+<input type="number" id="quantidade" value="1" min="1">
+
+
+<label>Observação:</label>
+
+<textarea id="obs" placeholder="Ex: Quero para aniversário dia 10..."></textarea>
+
+
+<button onclick="enviarWhatsapp()">
+
+Enviar pedido pelo WhatsApp
+
+</button>
+
 
 </section>
 
-
-<section>
-
-<h2>🍬 Brigadeiros Gourmet</h2>
-
-<div class="produtos">
-
-
-<div class="card">
-
-<img src="brigadeiros.png" class="produto-img">
-
-<h3>🍫 Linha Clássica</h3>
-
-<p>25 unidades: R$ 50,00</p>
-<p>50 unidades: R$ 95,00</p>
-<p>100 unidades: R$ 185,00</p>
-
-<button onclick="selecionar('Brigadeiros','Linha Clássica','')">📲 Encomendar</button>
-
-</div>
-
-
-<div class="card">
-
-<img src="brigadeiros-premium.png" class="produto-img">
-
-<h3>✨ Linha Especial</h3>
-
-<p>25 unidades: R$ 65,00</p>
-<p>50 unidades: R$ 115,00</p>
-<p>100 unidades: R$ 210,00</p>
-
-<button onclick="selecionar('Brigadeiros','Linha Especial','')">📲 Encomendar</button>
-
-</div>
-
-
-<div class="card">
-
-<img src="brigadeiros-premium.png" class="produto-img">
-
-<h3>⭐ Linha Suprema</h3>
-
-<p>25 unidades: R$ 75,00</p>
-<p>50 unidades: R$ 140,00</p>
-<p>100 unidades: R$ 245,00</p>
-
-<button onclick="selecionar('Brigadeiros','Linha Suprema','')">📲 Encomendar</button>
-
-</div>
-
-
-</div>
-
-</section>
 
 
 <footer>
 
-<h2>📲 Faça seu pedido</h2>
-
-<p>WhatsApp: 69 993955202</p>
-
-<p>Produção artesanal com ingredientes de qualidade ❤️</p>
+<p>WhatsApp: (69) 99395-5202</p>
 
 </footer>
 
 
 
-<script>
-
-let produto = "";
-let sabor = "";
-let valor = "";
-
-
-function selecionar(p,s,v){
-
-produto = p;
-sabor = s;
-valor = v;
-
-}
-
-
-function enviarPedido(){
-
-if(produto == ""){
-
-alert("Escolha um produto primeiro!");
-
-return;
-
-}
-
-
-let mensagem =
-"Olá! Gostaria de fazer uma encomenda na BIBI Bolos & Doces.%0A%0A"+
-"Produto: "+produto+"%0A"+
-"Sabor/Linha: "+sabor+"%0A"+
-"Valor: R$ "+valor;
-
-
-window.open(
-"https://wa.me/5569993955202?text="+mensagem,
-"_blank"
-);
-
-}
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
 
