@@ -1,318 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BIBI Bolos e Doces</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-
-<body>
-
-
-<header>
-
-<img src="logo-bibi.png" class="logo">
-
-<h1>BIBI Bolos e Doces</h1>
-
-<p>
-Bolos e doces feitos com carinho, sabor e qualidade ❤️
-</p>
-
-</header>
-
-
-
-
-
-<section class="cardapio">
-
-
-<h2>🍰 Nosso Cardápio</h2>
-
-
-<div class="produtos">
-
-
-
-<div class="card">
-
-<img src="bolo-chocolate.png" class="produto-img">
-
-<h3>Bolo Pequeno</h3>
-
-
-<p>
-Chocolate, Ninho, Prestígio e Maracujá
-</p>
-
-
-<h2>R$35,00</h2>
-
-
-<button onclick="selecionarProduto('Bolo Pequeno')">
-
-Pedir
-
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<img src="bolo-prestigio.png" class="produto-img">
-
-<h3>Bolo Grande</h3>
-
-
-<p>
-Chocolate, Ninho, Prestígio e Maracujá
-</p>
-
-
-<h2>R$45,00</h2>
-
-
-<button onclick="selecionarProduto('Bolo Grande')">
-
-Pedir
-
-</button>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="cardapio">
-
-
-<h2>🍬 Brigadeiros Gourmet</h2>
-
-
-<div class="produtos">
-
-
-
-
-
-<div class="card">
-
-
-<img src="brigadeiros.png" class="produto-img">
-
-
-<h3>🍫 Linha Clássica</h3>
-
-
-<p>
-Os tradicionais que todo mundo ama!
-</p>
-
-
-<ul>
-
-<li>Chocolate</li>
-<li>Ninho</li>
-<li>Beijinho</li>
-<li>Coco Queimado</li>
-<li>Meio Amargo</li>
-<li>Chocolate Branco</li>
-
-</ul>
-
-
-<h3>
-
-25 unidades - R$50,00
-
-</h3>
-
-
-<h3>
-
-50 unidades - R$95,00
-
-</h3>
-
-
-<h3>
-
-100 unidades - R$185,00
-
-</h3>
-
-
-
-<button onclick="selecionarProduto('Brigadeiro Linha Clássica')">
-
-Pedir
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<img src="brigadeiros-premium.png">
-
-
-<h3>✨ Linha Especial</h3>
-
-
-<p>
-Sabores que surpreendem!
-</p>
-
-
-<ul>
-
-<li>Prestígio</li>
-<li>Limão</li>
-<li>Laranja</li>
-<li>Cenoura com Chocolate</li>
-
-</ul>
-
-
-<h3>
-
-25 unidades - R$60,00
-
-</h3>
-
-
-<h3>
-
-50 unidades - R$110,00
-
-</h3>
-
-
-<h3>
-
-100 unidades - R$200,00
-
-</h3>
-
-
-
-<button onclick="selecionarProduto('Brigadeiro Linha Especial')">
-
-Pedir
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<img src="brigadeiros-premium.png">
-
-
-<h3>👑 Linha Suprema</h3>
-
-
-<p>
-Sabores premium para momentos especiais!
-</p>
-
-
-<ul>
-
-<li>Ferrero Rocher</li>
-<li>Oreo</li>
-<li>Nutella</li>
-<li>Paçoca</li>
-<li>Morango</li>
-
-</ul>
-
-
-
-<h3>
-
-25 unidades - R$70,00
-
-</h3>
-
-
-<h3>
-
-50 unidades - R$130,00
-
-</h3>
-
-
-<h3>
-
-100 unidades - R$230,00
-
-</h3>
-
-
-
-<button onclick="selecionarProduto('Brigadeiro Linha Suprema')">
-
-Pedir
-
-</button>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
 <section class="pedido">
 
 
@@ -321,17 +6,31 @@ Pedir
 
 <label>Produto:</label>
 
-<select id="produto">
+<select id="produto" onchange="atualizarSabores()">
 
-<option>Bolo Pequeno</option>
+<option value="">
+Selecione o produto
+</option>
 
-<option>Bolo Grande</option>
+<option value="Bolo Pequeno">
+Bolo Pequeno
+</option>
 
-<option>Brigadeiro Linha Clássica</option>
+<option value="Bolo Grande">
+Bolo Grande
+</option>
 
-<option>Brigadeiro Linha Especial</option>
+<option value="Brigadeiro Linha Clássica">
+Brigadeiro Linha Clássica
+</option>
 
-<option>Brigadeiro Linha Suprema</option>
+<option value="Brigadeiro Linha Especial">
+Brigadeiro Linha Especial
+</option>
+
+<option value="Brigadeiro Linha Suprema">
+Brigadeiro Linha Suprema
+</option>
 
 </select>
 
@@ -340,28 +39,11 @@ Pedir
 
 <label>Sabor:</label>
 
-
 <select id="sabor">
 
-<option>Chocolate</option>
-<option>Ninho</option>
-<option>Prestígio</option>
-<option>Maracujá</option>
-
-<option>Beijinho</option>
-<option>Coco Queimado</option>
-<option>Meio Amargo</option>
-<option>Chocolate Branco</option>
-
-<option>Limão</option>
-<option>Laranja</option>
-<option>Cenoura com Chocolate</option>
-
-<option>Ferrero Rocher</option>
-<option>Oreo</option>
-<option>Nutella</option>
-<option>Paçoca</option>
-<option>Morango</option>
+<option>
+Selecione primeiro o produto
+</option>
 
 </select>
 
@@ -401,39 +83,3 @@ Enviar pedido pelo WhatsApp
 
 
 </section>
-
-
-
-
-
-
-
-<footer>
-
-
-<h3>
-📲 WhatsApp
-</h3>
-
-
-<p>
-69 99395-5202
-</p>
-
-
-<p>
-Produção artesanal com muito amor ❤️
-</p>
-
-
-</footer>
-
-
-
-
-<script src="script.js"></script>
-
-
-</body>
-
-</html>
